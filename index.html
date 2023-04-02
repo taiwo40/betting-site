@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <title>bet here</title>
+</head>
+<body>
+    <p> predict and win</p>
+    <p><b id="demo"></b></p>
+    <p> result ;<b id="outputresult"></b></p>
+    <p><b id="outcome"></b></p>
+    
+     <form>
+    <label for=""></label>
+    <input type="text" id="output">
+     <div id="hope">
+    <button class="btn btn-primary" onclick="document.getElementById('output').value +='1'">1</button>
+    <button class="btn btn-primary" onclick="document.getElementById('output').value +='2'">2</button>
+    <button class="btn btn-primary" onclick="document.getElementById('output').value +='3'">3</button>
+    <button class="btn btn-primary" onclick="document.getElementById('output').value +='4'">4</button>
+    <button class="btn btn-primary" onclick="document.getElementById('output').value +='5'">5</button>
+    <button class="btn btn-primary" onclick="document.getElementById('output').value +='6'">6</button>
+    <button class="btn btn-primary" onclick="document.getElementById('output').value +='7'">7</button>
+    <button class="btn btn-primary" onclick="document.getElementById('output').value +='8'">8</button>
+    <button class="btn btn-primary" onclick="document.getElementById('output').value +='9'">9</button>
+     <button class="btn btn-primary" onclick="document.getElementById('output').value +='10'">10</button>
+      <button  class="btn btn-primary" onclick="document.getElementById('output').value = document.getElementById('output').value.slice(0, document.getElementById('output').value.length - 1)" > cancel </button>
+    </div>
+     <button class="btn btn-primary" onclick="getdetails()" type="submit" >Submit</button>
+    </form>
+
+
+    <p> press submit to view your result</p>
+    <script>
+         let form =document.forms[0]
+        form.addEventListener('submit', submitform )
+       function submitform(e){
+        e.preventDefault()
+        let random = Math.floor(Math.random() * 11)
+         document.getElementById('demo').innerHTML=random 
+   
+       
+        }
+        function getdetails(){
+        let hope=document.getElementById('hope').value
+        let random=document.getElementById('outputresult').value
+        let outputresult;
+        let submit='';
+        if(submit =='' && ( hope == random) ){
+            outputresult=''
+        } document.getElementById('outputresult').innerHTML='you lose'
+          document.getElementById('outcome').innerHTML=''
+      
+             
+        }
+        
+          
+           
+
+        
+
+    </script>
+</body>
+</html>
